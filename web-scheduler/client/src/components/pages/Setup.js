@@ -2,7 +2,9 @@ import React from 'react';
 
 function Setup () {
     return (
-        <h1></h1>
+        <div>
+            <h1>Preferences</h1>
+        </div>
     );
 }
 
