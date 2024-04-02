@@ -1,6 +1,6 @@
 const db = require('../config/connection');
-const {  } = require('../models');
-//seeds const seeds = require('./');
+const { placeHolder } = require('../models');
+const seeds = require('./');
 
 db.once('open', async () => {
     try{
