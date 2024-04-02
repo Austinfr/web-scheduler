@@ -13,6 +13,6 @@ db.once('open', async () => {
         process.exit(0);
 
     } catch(err){
-        throw(err);
+        throw err;
     }
 })
