@@ -1,10 +1,9 @@
 import React from 'react';
-import './style/header.css'
 
 function Header() {
   return (
     <header>
-        <h1>My Portfolio</h1>
+        <h1 class='header'>shceudl</h1>
     </header>
   );
 }

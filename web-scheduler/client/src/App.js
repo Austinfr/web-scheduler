@@ -1,6 +1,7 @@
 
 import './App.css';
-import {Router, Route, Routes }from 'react-router-dom';
+import './components/style/style.css';
+import {BrowserRouter, Route, Routes }from 'react-router-dom';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -15,9 +16,8 @@ function App() {
   return (
     <div>
       <Header />
-      <Home />
       <Navigation />
-        <Router>
+        <BrowserRouter>
           <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
@@ -25,9 +25,9 @@ function App() {
           <Route path="/setup" element={<Setup/>} />
           <Route path="/signup" element={<Signup/>} />
           </Routes>
-          </Router>
+        </BrowserRouter>
       <Footer />
-      </div>
+    </div>
   );
 }
 

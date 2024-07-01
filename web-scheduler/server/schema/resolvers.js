@@ -13,7 +13,10 @@ const resolvers = {
 
     Mutation: {
         addStock: async (parent, { id, name })  => {
-            return Stock.create({ id, name})
+            return Stock.create({ id, name});
+        },
+        removeStock: async (parent, { stockId } ) => {
+            return Stock.findOneAndDelete({ _id: stockId });
         }
     }
 }
