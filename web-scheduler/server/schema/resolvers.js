@@ -12,11 +12,22 @@ const resolvers = {
     },
 
     Mutation: {
-        addStock: async (parent, { id, name })  => {
-            return Stock.create({ id, name});
+        addStock: async (parent, { id, name, quantity, description })  => {
+            return Stock.create({ id, name, quantity, description});
         },
         removeStock: async (parent, { stockId } ) => {
             return Stock.findOneAndDelete({ _id: stockId });
+        },
+        updateStock: async (parent, { stockId, newQuantity }) => {
+            return Stock.findOneAndUpdate({
+                _id: stockId
+            },
+            {
+                quantity: newQuantity
+            },
+            {
+                new: true
+            });
         }
     }
 }
