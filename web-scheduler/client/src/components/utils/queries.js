@@ -9,10 +9,4 @@ const QUERY_APPOINTMENTS = gql`
     }
 `;
 
-const MAKE_APPOINTMENTS = gql`
-    query makeAppointments {
-        
-    }
-`;
-
-export { QUERY_APPOINTMENTS , MAKE_APPOINTMENTS }
+export { QUERY_APPOINTMENTS }
