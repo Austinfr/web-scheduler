@@ -10,6 +10,7 @@ import About from './components/pages/About';
 import Schedule from './components/pages/Schedule';
 import Setup from './components/pages/Setup';
 import Signup from './components/pages/Signup';
+import MA from './components/pages/MakeAppointment';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/schedule" element={<Schedule/>} />
           <Route path="/setup" element={<Setup/>} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/makeAppointment" element={<MA/>} />
           </Routes>
         </BrowserRouter>
       <Footer />

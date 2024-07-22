@@ -1,4 +1,3 @@
-const placeHolder = require('');
 const Stock = require('./stock');
 const Appointment = require('./appointment');
 

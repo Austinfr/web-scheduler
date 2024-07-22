@@ -1,4 +1,4 @@
-const { Stock } = require('../models');
+const { Stock, User } = require('../models');
 
 const resolvers = {
     Query: {
@@ -14,6 +14,9 @@ const resolvers = {
     Mutation: {
         addStock: async (parent, { id, name, quantity, description })  => {
             return Stock.create({ id, name, quantity, description});
+        },
+        addUser: async (parent, { name, password }) => {
+            return User.create({ name, password });
         },
         removeStock: async (parent, { stockId } ) => {
             return Stock.findOneAndDelete({ _id: stockId });
