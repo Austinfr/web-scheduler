@@ -11,4 +11,14 @@ const MAKE_APPOINTMENTS = gql`
     }
 `;
 
-export { MAKE_APPOINTMENTS }
+const ADD_USER = gql`
+    mutation makeUser($un: String!, $pd: String!){
+        addUser(username: $un, password: $pd){
+            _id
+            username
+            password
+        }
+    }
+`;
+
+export { MAKE_APPOINTMENTS, ADD_USER }
