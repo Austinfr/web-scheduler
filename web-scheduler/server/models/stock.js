@@ -14,7 +14,12 @@ const stockSchema = new Schema({
     description: {
         type: String,
         trim: true,
-    }
+    },
+    for:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Appointment',
+        required: true
+    },
 });
 
 const Stock = model('Stock', stockSchema);
