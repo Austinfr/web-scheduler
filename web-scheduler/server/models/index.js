@@ -1,3 +1,5 @@
 const placeHolder = require('');
+const Stock = require('./stock');
+const Appointment = require('./appointment');
 
-module.exports = {}
+module.exports = { Stock, Appointment }
