@@ -1,18 +1,12 @@
 const { Schema, model } = require('mongoose');
 
 const appointmentSchema = new Schema({
-    id: {
-        type: Number,
+    appointmentType: {
+        type: String,
         required: true,
-        unique: true,
-        trim: true
     },
     appointmentDate: {
         type: Date,
-        required: true,
-    },
-    appointmentType: {
-        type: String,
         required: true,
     }
 });
