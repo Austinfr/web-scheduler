@@ -1,19 +1,16 @@
 import { gql } from '@apollo/client';
 
-const MAKE_APPOINTMENTS = gql`
-    mutation makeAppointments($a: String!, $q: Int!, $d: String) {
-        addStock(name: $a, quantity: $q, description: $d) {
-            _id
-            name
-            quantity
-            description
+const MAKE_APPOINTMENT = gql`
+    mutation makeAppointments($title: String!, $date: Date!) {
+        addAppointment(title: $title, date: date) {
+            
         }
     }
 `;
 
 const ADD_USER = gql`
-    mutation makeUser($un: String!, $pd: String!){
-        addUser(username: $un, password: $pd){
+    mutation makeUser($username: String!, $password: String!){
+        addUser(username: $username, password: $password){
             _id
             username
             password
@@ -21,4 +18,4 @@ const ADD_USER = gql`
     }
 `;
 
-export { MAKE_APPOINTMENTS, ADD_USER }
+export { MAKE_APPOINTMENT, ADD_USER }

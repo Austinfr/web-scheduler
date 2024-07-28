@@ -1,4 +1,5 @@
 import React from 'react';
+import MAKE_APPOINTMENT from '../utils/mutations';
 
 
 const AppointmentList = ({ AppointmentList }) => {
@@ -6,13 +7,18 @@ const AppointmentList = ({ AppointmentList }) => {
         return <h3>No Appointments to make</h3>
     }
     return (
-        <form>
-            {AppointmentList.map((appointment) => (
+        <form onSubmit={MAKE_APPOINTMENT}>
+            {AppointmentList.map((appointment) => {
+                appointment.isAvailable ? 
+                (<div></div>)
+                :
+                (
                 <div>
-                    <input type='radio' id={appointment.name} name="appoint" value={appointment.name}></input>
-                    <label for={appointment.name}>{appointment.name}</label>
+                    <input type='radio' id={appointment.appointmentType} name="appoint" value={appointment.appointmentType}></input>
+                    <label for={appointment.appointmentType}>{appointment.appointmentType}</label>
                 </div>
-            ))}
+                )
+            })}
         </form>
     )
 }
