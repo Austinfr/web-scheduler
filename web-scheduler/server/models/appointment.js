@@ -9,6 +9,10 @@ const appointmentSchema = new Schema({
         type: Date,
         required: true,
     }
+    isAvailable: {
+        type: Boolean,
+        required: true,
+    }
 });
 
 const Appointment = model('Appointment' , appointmentSchema);

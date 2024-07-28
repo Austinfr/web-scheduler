@@ -8,12 +8,17 @@ const AppointmentList = ({ AppointmentList }) => {
     }
     return (
         <form onSubmit={MAKE_APPOINTMENT}>
-            {AppointmentList.map((appointment) => (
+            {AppointmentList.map((appointment) => {
+                appointment.isAvailable ? 
+                (<div></div>)
+                :
+                (
                 <div>
-                    <input type='radio' id={appointment.name} name="appoint" value={appointment.name}></input>
-                    <label for={appointment.name}>{appointment.name}</label>
+                    <input type='radio' id={appointment.appointmentType} name="appoint" value={appointment.appointmentType}></input>
+                    <label for={appointment.appointmentType}>{appointment.appointmentType}</label>
                 </div>
-            ))}
+                )
+            })}
         </form>
     )
 }
