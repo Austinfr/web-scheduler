@@ -1,10 +1,14 @@
 import React from 'react';
+import MakeAppointment from './MakeAppointment';
 
 function Schedule () {
     return (
-        <h1>
-            <p>this is the schedule</p>
-        </h1>
+        <div>
+            <h1>
+                <p>this is the schedule</p>
+            </h1>
+            <MakeAppointment/>
+        </div>
     );
 }
 
