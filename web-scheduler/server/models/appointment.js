@@ -8,7 +8,7 @@ const appointmentSchema = new Schema({
     appointmentDate: {
         type: Date,
         required: true,
-    }
+    },
     isAvailable: {
         type: Boolean,
         required: true,
