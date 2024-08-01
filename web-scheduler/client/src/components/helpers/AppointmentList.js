@@ -8,9 +8,9 @@ const AppointmentList = ({ AppointmentList }) => {
     }
     return (
         <form onSubmit={MAKE_APPOINTMENT}>
-            {AppointmentList.map((appointment) => {
+            {AppointmentList.map((appointment) => 
                 appointment.isAvailable ? 
-                (<div></div>)
+                (<div>There are no slots for {appointment.appointmentType} available</div>)
                 :
                 (
                 <div>
@@ -18,7 +18,7 @@ const AppointmentList = ({ AppointmentList }) => {
                     <label for={appointment.appointmentType}>{appointment.appointmentType}</label>
                 </div>
                 )
-            })}
+            )}
         </form>
     )
 }
